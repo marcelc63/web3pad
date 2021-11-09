@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web3Pad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://user-assets.tailory.io/assets/tailwind.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+
+    <script type="tailwind-config">
+      {
+      darkMode: 'class',
+      }
+    </script>
+  </head>
+  <body>
+    <header class="py-10 overflow-hidden bg-gray-50 sm:py-16 lg:py-24">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto text-center">
+          <p class="text-purple-500 mb-4 text-xl font-bold">Web3Pad</p>
+          <h1
+            class="
+              text-3xl
+              font-bold
+              leading-tight
+              text-black
+              sm:text-4xl
+              lg:text-5xl
+            "
+          >
+            Breakdowns and Templates of Popular Smart Contracts
+          </h1>
+          <p class="mt-4 text-base leading-relaxed text-gray-600">
+            Every week I publish a deep dive breakdown of a popular smart
+            contract. Each contract discussed will be unique and cover different
+            aspect and mechanism of the smart contract. Along with the breakdown
+            is a contract template on Github that you can clone, modify, and
+            deploy.
+          </p>
+        </div>
+
+        <div
+          class="
+            flex flex-col
+            items-center
+            md:items-start
+            justify-center
+            max-w-lg
+            px-10
+            mx-auto
+            mt-8
+            space-y-8
+            lg:max-w-xl
+            sm:px-0 sm:space-y-0 sm:flex-row sm:mt-16 sm:space-x-6
+            lg:space-x-12
+            sm:items-center
+          "
+        >
+          <div class="flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+
+            <p class="ml-4 text-lg font-semibold text-black">Publish weekly</p>
+          </div>
+          <a
+            href="https://github.com/marcelc63/popular-contract-templates"
+            target="_blank"
+          >
+            <div class="flex items-center hover:underline">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+              <p class="ml-4 text-lg font-semibold leading-snug text-black">
+                Template Repository
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-10 bg-white sm:py-16 lg:py-24">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto text-center mb-8">
+          <h2
+            class="
+              text-3xl
+              font-bold
+              leading-tight
+              text-black
+              sm:text-4xl
+              lg:text-5xl
+            "
+          >
+            Breakdowns and Template
+          </h2>
+          <p
+            class="
+              max-w-xl
+              mx-auto
+              mt-4
+              text-base
+              leading-relaxed
+              text-gray-600
+            "
+          >
+            Deep Dive Breakdowns and Deployable Contract Templates of Popular
+            Smart Contracts
+          </p>
+        </div>
+        <div
+          class="
+            grid grid-cols-1
+            gap-12
+            text-center
+            sm:grid-cols-2
+            md:grid-cols-3
+            lg:gap-y-16
+          "
+        >
+          <div
+            class="
+              border border-purple-500
+              rounded
+              py-2
+              px-4
+              flex flex-col
+              justify-center
+              shadow
+            "
+          >
+            <h3 class="text-lg font-semibold text-purple-500">CoolCatsNFT</h3>
+            <p class="mt-4 text-base text-gray-600">
+              A well written and gas efficient contract that you can use to
+              deploy basic NFTs.
+            </p>
+            <div class="mt-4 flex justify-center items-center w-full mb-2">
+              <a
+                href="https://github.com/marcelc63/coolcatsnft-template"
+                target="_blank"
+              >
+                <button
+                  class="
+                    bg-purple-500
+                    hover:bg-purple-400
+                    text-white
+                    p-2
+                    rounded
+                    mr-2
+                  "
+                >
+                  Template
+                </button>
+              </a>
+              <a
+                href="https://twitter.com/Marcelc63/status/1447955252431392769"
+                target="_blank"
+              >
+                <button
+                  class="
+                    bg-purple-500
+                    hover:bg-purple-400
+                    text-white
+                    p-2
+                    rounded
+                  "
+                >
+                  Breakdown
+                </button>
+              </a>
+            </div>
+            <p class="text-xs text-gray-600">Published 12 October 2021</p>
+          </div>
+          <div
+            class="
+              border border-purple-500
+              rounded
+              py-2
+              px-4
+              flex flex-col
+              justify-center
+              shadow
+            "
+          >
+            <h3 class="text-lg font-semibold text-purple-500">SuperSea</h3>
+            <p class="mt-4 text-base text-gray-600">
+              Use the smart contract to create NFT membership and subscriptions
+              for your SaaS.
+            </p>
+            <div class="mt-4 flex justify-center items-center w-full mb-2">
+              <a
+                href="https://github.com/marcelc63/supersea-template"
+                target="_blank"
+              >
+                <button
+                  class="
+                    bg-purple-500
+                    hover:bg-purple-400
+                    text-white
+                    p-2
+                    rounded
+                    mr-2
+                  "
+                >
+                  Template
+                </button>
+              </a>
+              <a
+                href="https://twitter.com/Marcelc63/status/1450493454522351620"
+                target="_blank"
+              >
+                <button
+                  class="
+                    bg-purple-500
+                    hover:bg-purple-400
+                    text-white
+                    p-2
+                    rounded
+                  "
+                >
+                  Breakdown
+                </button>
+              </a>
+            </div>
+            <p class="text-xs text-gray-600">Published 19 October 2021</p>
+          </div>
+          <div
+            class="
+              border border-purple-500
+              rounded
+              py-2
+              px-4
+              flex flex-col
+              justify-center
+              shadow
+            "
+          >
+            <h3 class="text-lg font-semibold text-purple-500">Loot</h3>
+            <p class="mt-4 text-base text-gray-600">
+              A way to create on-chain NFT without needing to use IPFS or
+              external links to host images.
+            </p>
+            <div class="mt-4 flex justify-center items-center w-full mb-2">
+              <a
+                href="https://github.com/marcelc63/loot-template"
+                target="_blank"
+              >
+                <button
+                  class="
+                    bg-purple-500
+                    hover:bg-purple-400
+                    text-white
+                    p-2
+                    rounded
+                    mr-2
+                  "
+                >
+                  Template
+                </button>
+              </a>
+              <a
+                href="https://twitter.com/marcelc63/status/1453031703723732995"
+                target="_blank"
+              >
+                <button
+                  class="
+                    bg-purple-500
+                    hover:bg-purple-400
+                    text-white
+                    p-2
+                    rounded
+                  "
+                >
+                  Breakdown
+                </button>
+              </a>
+            </div>
+            <p class="text-xs text-gray-600">Published 26 October 2021</p>
+          </div>
+          <div
+            class="
+              border border-purple-500
+              rounded
+              py-2
+              px-4
+              flex flex-col
+              justify-center
+              shadow
+            "
+          >
+            <h3 class="text-lg font-semibold text-purple-500">AltNouns</h3>
+            <p class="mt-4 text-base text-gray-600">
+              Create infinite derivative NFTs through inter contract calls and
+              do dope SVG manipulation.
+            </p>
+            <div class="mt-4 flex justify-center items-center w-full mb-2">
+              <a
+                href="https://github.com/marcelc63/popular-contract-templates/tree/altnouns-template"
+                target="_blank"
+              >
+                <button
+                  class="
+                    bg-purple-500
+                    hover:bg-purple-400
+                    text-white
+                    p-2
+                    rounded
+                    mr-2
+                  "
+                >
+                  Template
+                </button>
+              </a>
+              <a
+                href="https://twitter.com/marcelc63/status/1455556881280159746"
+                target="_blank"
+              >
+                <button
+                  class="
+                    bg-purple-500
+                    hover:bg-purple-400
+                    text-white
+                    p-2
+                    rounded
+                  "
+                >
+                  Breakdown
+                </button>
+              </a>
+            </div>
+            <p class="text-xs text-gray-600">Published 2 November 2021</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-10 bg-gray-100 sm:py-16 lg:py-24">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2
+            class="
+              text-3xl
+              font-bold
+              leading-tight
+              text-black
+              sm:text-4xl
+              lg:text-5xl
+            "
+          >
+            Get notify when the next Breakdown drops!
+          </h2>
+          <p
+            class="
+              max-w-xl
+              mx-auto
+              mt-4
+              text-base
+              leading-relaxed
+              text-gray-600
+            "
+          >
+            Everyweek, new breakdown and template is announced on @marcelc63's
+            twitter. Follow and turn on notifications bell to always get the
+            latest breakdown and templates!
+          </p>
+        </div>
+
+        <div class="max-w-xl mx-auto mt-12">
+          <div class="flex flex-col items-center sm:flex-row sm:justify-center">
+            <a href="https://twitter.com/marcelc63" target="_blank">
+              <button
+                type="submit"
+                class="
+                  inline-flex
+                  items-center
+                  justify-center
+                  w-auto
+                  px-4
+                  py-4
+                  mt-4
+                  font-semibold
+                  text-white
+                  transition-all
+                  duration-200
+                  bg-indigo-600
+                  border border-transparent
+                  rounded-md
+                  sm:ml-4 sm:mt-0 sm:w-auto
+                  hover:bg-indigo-700
+                  focus:bg-indigo-700
+                "
+              >
+                <svg
+                  class="w-6 h-6 mr-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+                  ></path>
+                </svg>
+                Follow @marcelc63 on Twitter
+                <svg
+                  class="w-5 h-5 ml-3 -mr-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div
+          class="
+            text-center
+            xl:flex xl:items-center xl:justify-between xl:text-left
+          "
+        >
+          <div class="xl:flex xl:items-center xl:justify-start">
+            <p class="mt-5 text-sm text-black xl:ml-6 xl:mt-0">
+              Curated by Marcel Christianis
+            </p>
+            <a
+              class="mt-5 text-sm xl:ml-6 xl:mt-0 text-black"
+              href="https://rareblocks.xyz"
+              target="_blank"
+            >
+              Power by rareblocks.xyz
+            </a>
+          </div>
+
+          <div
+            class="
+              items-center
+              mt-8
+              xl:mt-0 xl:flex xl:justify-end xl:space-x-8
+            "
+          >
+            <div
+              class="w-full h-px mt-8 mb-5 xl:w-px xl:m-0 xl:h-6 bg-gray-50/20"
+            ></div>
+
+            <ul
+              class="flex items-center justify-center space-x-8 xl:justify-end"
+            >
+              <li>
+                <a
+                  href="https://twitter.com/marcelc63"
+                  target="_blank"
+                  title=""
+                  class="
+                    block
+                    text-black
+                    transition-all
+                    duration-200
+                    hover:text-opacity-80
+                    focus:text-opacity-80
+                    flex
+                    items-center
+                  "
+                >
+                  <svg
+                    class="w-6 h-6 mr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+                    ></path>
+                  </svg>
+                  <span
+                    class="
+                      text-sm text-black
+                      transition-all
+                      duration-200
+                      hover:text-opacity-80
+                      focus:text-opacity-80
+                    "
+                  >
+                    marcelc63
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
